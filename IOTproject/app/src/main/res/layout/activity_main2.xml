@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity2">
+
+    <!-- 이미지를 담을 공간을 FrameLayout으로 감싸 겹치도록 했다.-->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="350dp">
+
+        <ImageView
+            android:id="@+id/day"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:src="@drawable/day">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/day_night"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:src="@drawable/day_night">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/night"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:src="@drawable/night">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/night_day"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:src="@drawable/night_day">
+
+        </ImageView>
+
+
+        <TextView
+            android:id="@+id/Weather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="hello"
+            android:textAlignment="center"
+            android:textStyle="italic"
+            android:textSize="60dp"
+            android:textColor="#123123">
+
+        </TextView>
+
+
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!--버튼은 배경과 유사하게 사막의 테마를 사용했으며 버튼 디자인은 drawable/buttonstyle에서 디자인 했다.-->
+        <Button
+            android:id="@+id/calendar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:text="Calender"
+            android:background="@drawable/buttonstyle"
+            tools:ignore="MissingConstraints">
+
+        </Button>
+
+        <Button
+            android:id="@+id/newsButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/calendar"
+            android:layout_marginLeft="30dp"
+            android:text="News"
+            android:textStyle="italic"
+            android:background="@drawable/buttonstyle"
+
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="202dp">
+
+        </Button>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/copyRightButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/newsButton"
+        android:layout_marginTop="10dp"
+        android:text="HELP"
+        android:background="@drawable/buttonstyle">
+    </Button>
+
+    <TextView
+        android:id="@+id/copyRight"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="#aad99a6b"
+        android:text="'@CopyRight 2022. Hong inhatc. all right reserved\n"
+        android:textAlignment="center">
+
+
+
+    </TextView>
+    <RatingBar
+        android:id="@+id/ratingbar"
+        style="@style/Widget.AppCompat.RatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:rating="3"
+
+        android:layout_marginLeft="70dp"
+        />
+
+
+
+
+</LinearLayout>
